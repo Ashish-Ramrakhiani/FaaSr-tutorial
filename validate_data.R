@@ -19,4 +19,6 @@ validate_data <- function(threshold = 50, data_size = NULL) {
     faasr_log("RETURNING: FALSE")
     return(FALSE) # Explicitly return FALSE
   }
+
+  return(TRUE)
 }
