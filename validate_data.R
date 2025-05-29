@@ -1,18 +1,22 @@
+# File: R/validate_data.R (in your repository)
 validate_data <- function(threshold = 50, data_size = NULL) {
-  # Simulate reading some data
-  if (is.null(data_size)) {
-    data_size <- sample(1:100, 1)  # Random data size between 1-100
-  }
+  
+  # Generate random data size if not provided
+  
+    data_size <- sample(30:80, 1)  # Random between 30-80
   
   # Log what we're doing
-  faasr_log(paste("Validating data with size:", data_size, "against threshold:", threshold))
+  faasr_log(paste("=== VALIDATE_DATA FUNCTION ==="))
+  faasr_log(paste("Data size:", data_size, "Threshold:", threshold))
   
-  # Validation logic: data is valid if size >= threshold
+  # Validation logic
   if (data_size >= threshold) {
     faasr_log(paste("SUCCESS: Data size", data_size, "meets threshold", threshold))
-    return(TRUE)  # Will trigger actions with [TRUE] condition
+    faasr_log("RETURNING: TRUE")
+    return(TRUE)  # Explicitly return TRUE
   } else {
-    faasr_log(paste("FAILURE: Data size", data_size, "below threshold", threshold))
-    return(FALSE) # Will trigger actions with [FALSE] condition
+    faasr_log(paste("FAILURE: Data size", data_size, "below threshold", threshold))  
+    faasr_log("RETURNING: FALSE")
+    return(FALSE) # Explicitly return FALSE
   }
 }
