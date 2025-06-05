@@ -12,13 +12,10 @@ validate_data <- function(threshold = 50, data_size = NULL) {
   # Validation logic
   if (data_size >= threshold) {
     faasr_log(paste("SUCCESS: Data size", data_size, "meets threshold", threshold))
-    faasr_log("RETURNING: TRUE")
-    return(TRUE)  # Explicitly return TRUE
+    faasr_log("RETURNING: TRUE")  # Explicitly return TRUE
   } else {
     faasr_log(paste("FAILURE: Data size", data_size, "below threshold", threshold))  
     faasr_log("RETURNING: FALSE")
-    return(TRUE) # Explicitly return FALSE
+     # Explicitly return FALSE
   }
-
-  return(TRUE)
 }
