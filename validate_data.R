@@ -18,6 +18,6 @@ validate_data <- function(threshold = 50, data_size = NULL) {
     faasr_log(paste("FAILURE: Data size", data_size, "below threshold", threshold))  
     faasr_log("RETURNING: FALSE")
      # Explicitly return FALSE
-    return(TRUE)
+    return(FALSE)
   }
 }
