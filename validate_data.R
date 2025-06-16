@@ -10,7 +10,7 @@ validate_data <- function(threshold, data_size) {
   faasr_log(paste("Data size parameter:", data_size))
   
   # Simple validation logic (you can change this return value for testing)
-  result <- FALSE  # Change this to FALSE to test the error path
+  result <- TRUE  # Change this to FALSE to test the error path
   
   # Log the result
   if (result) {
